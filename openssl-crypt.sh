@@ -25,10 +25,9 @@ function home {
 	echo -n
 	read homeInput
 	if [ $homeInput = "1" ]
-	then
-		encrypt
-	fi
-	if [ $homeInput = "2" ]
+		then
+			encrypt
+		elif [ $homeInput = "2" ]
 		then
 			decrypt
 		else
