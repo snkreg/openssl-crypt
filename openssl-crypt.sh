@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # Copyright 2013 yAzZiE Labs
 #
@@ -29,9 +29,11 @@ function home {
 		encrypt
 	fi
 	if [ $homeInput = "2" ]
-	then
-		decrypt
-	fi
+		then
+			decrypt
+		else
+			clear; home
+     fi
 }
 
 function encrypt {
@@ -57,19 +59,23 @@ function encrypt {
 	echo -n
 	read encryptOpt
 	if [ $encryptOpt = "y" ]
-	then
-		rm $encryptFile
-		echo
-		echo ====================
-		echo
-		home
-	fi
-	if [ $encryptOpt = "N" ]
-	then
-		echo
-		echo ====================
-		echo
-		home
+		then
+			rm $encryptFile
+			echo
+			echo ====================
+			echo
+			home
+		elif [ $encryptOpt = "N" ]
+		then
+			echo
+			echo ====================
+			echo
+			home
+		else
+			echo
+			echo ====================
+			echo
+			home
 	fi
 }
 
@@ -94,19 +100,23 @@ function decrypt {
 	echo -n
 	read decryptOpt
 	if [ $decryptOpt = "y" ]
-	then
-		rm $decryptFile
-		echo
-		echo ====================
-		echo
-		home
-	fi
-	if [ $decryptOpt = "N" ]
-	then
-		echo
-		echo ====================
-		echo
-		home
+		then
+			rm $decryptFile
+			echo
+			echo ====================
+			echo
+			home
+		elif [ $decryptOpt = "N" ]
+		then
+			echo
+			echo ====================
+			echo
+			home
+		else
+			echo
+			echo ====================
+			echo
+			home
 	fi
 }
 
