@@ -9,7 +9,7 @@ Execution
 On Unix Systems that support Bash, use the following Terminal command to start openssl-crypt.
 
 ```
-bash openssl-crypt.sh
+$ bash openssl-crypt.sh
 ```
 
 (A Windows Batch script is currently under development.)
